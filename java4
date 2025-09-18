@@ -1,0 +1,23 @@
+package hometasks;
+
+import java.util.Scanner;
+
+public class hometask4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Sekil var mi? ");
+        boolean sekil = sc.nextBoolean();
+        System.out.println("Paylasimin metn uzunlugu nece simvoldan ibaretdir: ");
+        int simvol= sc.nextInt();
+        System.out.println("Paylasimin beyenilme sayi: ");
+        int like= sc.nextInt();
+        if(simvol>100 && like>500){
+            System.out.println("Populyar paylasimdir.");
+        }else if(sekil==true && simvol>50){
+            System.out.println("Maraqli paylasimdir");
+        }else{
+            System.out.println("Standart paylasimdir");
+
+        }
+    }
+}
