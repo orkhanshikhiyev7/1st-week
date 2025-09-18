@@ -1,0 +1,52 @@
+package hometasks;
+
+import java.util.Scanner;
+
+public class hometask5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Film novunu qeyd edin: ");
+        String filmNovu= sc.nextLine();
+        System.out.println("Heftenin gununu daxil edin: ");
+        String hefteGunu= sc.nextLine();
+        System.out.println("Hansi yas kateqoriyasindasiniz?");
+        String yas= sc.nextLine();
+        int bilet=0;
+        int shenbeBazar=2;
+        int ushaqEndirim=2;
+        int telebeEndirim=1;
+        if(filmNovu.equals("Action")||filmNovu.equals("Drama")){
+            if(hefteGunu.equals("Shenbe")||hefteGunu.equals("Bazar")){
+                bilet=12+shenbeBazar;
+            }else{
+                bilet=12;
+            }
+        }else if(filmNovu.equals("Comedy")) {
+            if (hefteGunu.equals("Shenbe") || hefteGunu.equals("Bazar")){
+                bilet=10+shenbeBazar;
+            }else {
+                bilet=10;
+            }
+        }else if(filmNovu.equals("Animation")){
+            if(hefteGunu.equals("Shenbe")||hefteGunu.equals("Bazar")){
+                bilet=8+shenbeBazar;
+            }else{
+                bilet=8;
+            }
+        }else{
+            if(hefteGunu.equals("Shenbe")||hefteGunu.equals("Bazar")){
+                bilet=10+shenbeBazar;
+            }else{
+                bilet=10;
+            }
+        }
+        if(yas.equals("Usaq")){
+            bilet=bilet-ushaqEndirim;
+        }else if(yas.equals("Telebe")){
+            bilet=bilet-telebeEndirim;
+        }else{
+            System.out.println("Endirim yoxdur");
+        }
+        System.out.println("Son bilet qiymeti: "+bilet);
+    }
+}
