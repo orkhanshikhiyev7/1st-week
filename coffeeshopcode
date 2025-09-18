@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Yashinizi daxil edin: ");
+        int yas = sc.nextInt();
+        if(yas<12){
+            System.out.println("Siz pulsuz icki qazandiniz!");
+        }else if(yas>13 && yas<17){
+            System.out.println("Siz telebe endirimi qazandiniz!");
+        }else if(yas>=65){
+            System.out.println("Siz ferqli endirim qazandiniz!");
+        }else{
+            System.out.println("Siz hec bir endirim qazanmadiniz.");
+        }
+        System.out.println("Qehve  menyusu");
+        System.out.println("1-Latte");
+        System.out.println("2-Americano");
+        System.out.println("3-Cappucino");
+        System.out.println("Sizin seciminiz: ");
+        int secim= sc.nextInt();
+        switch(secim){
+            case 1:
+                System.out.println("Siz Latte secdiniz.");
+                break;
+            case 2:
+                System.out.println("Siz Americano secdiniz.");
+                break;
+            case 3:
+                System.out.println("Siz Cappucino secdiniz.");
+                break;
+            default:
+                System.out.println("Sizin seciminiz menyuda yoxdur.");
+        }
+
+    }
+}
