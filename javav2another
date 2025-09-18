@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class hometask5v2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Film novunu daxil edin: ");
+        String nov= sc.nextLine();
+        System.out.println("Hefte gunlerini qeyd edin: ");
+        String gun= sc.nextLine();
+        System.out.println("Hansi yas kateqoriyasindasiniz? ");
+        String yas= sc.nextLine();
+        int bilet=0;
+        switch(nov){
+            case "Action":
+            case "Drama":
+                bilet=12;
+            break;
+            case "Comedy":
+                bilet=10;
+                break;
+            case "Animation":
+                bilet=8;
+            break;
+            default:
+                bilet=10;
+        }
+        switch(gun){
+            case "Shenbe":
+            case "Bazar":
+                bilet+=2;
+                break;
+        }
+        switch(yas){
+            case "Ushaq":
+                bilet-=2;
+                break;
+            case "Telebe":
+                bilet-=1;
+                break;
+        }
+        System.out.println("Son bilet qiymeti: "+bilet);
+    }
+}
