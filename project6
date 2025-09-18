@@ -1,0 +1,36 @@
+package hometasks;
+
+import java.util.Scanner;
+
+public class hometask6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Etmek istediyiniz emelin isaresini daxil edin: ");
+        char operator=sc.next().charAt(0);
+        System.out.println("Birinci ededi daxil edin: ");
+        int eded1= sc.nextInt();
+        System.out.println("Ikinci ededi daxil edin: ");
+        int eded2= sc.nextInt();
+        int netice=0;
+        switch(operator){
+            case '+':
+                netice=eded1+eded2;
+                break;
+            case '-':
+                netice=eded1-eded2;
+                break;
+            case '*':
+                netice=eded1*eded2;
+                break;
+            case '/':
+                if(eded2!=0){
+                    netice=eded1/eded2;
+                }else{
+                    System.out.println("bele bir emel ola bilmez: ");
+                }
+
+        }
+        System.out.println("netice: "+netice);
+
+    }
+}
