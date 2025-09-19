@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class hometask1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1ci mehsulun qiymetini daxil edin: ");
+        int mehsul1= sc.nextInt();
+        System.out.println("2ci mehsulun qiymetini daxil edin: ");
+        int mehsul2=sc.nextInt();
+        int cem=mehsul1+mehsul2;
+        if(cem>50){
+            System.out.println("50 manatdan yuxari alis verise pulsuz catdirilma!");
+        }else{
+            System.out.println("Siz pulsuz catdirilma qazanmadiniz");
+        }
+    }
+}
