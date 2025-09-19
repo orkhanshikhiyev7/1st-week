@@ -1,0 +1,16 @@
+package hometasks;
+
+import java.util.Scanner;
+
+public class hometask2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Yashinizi daxil edin: ");
+        int yas= sc.nextInt();
+        if(yas<18){
+            System.out.println("Biletin qiymeti 0.50 AZN-dir");
+        }else if(yas>18){
+            System.out.println("Biletin qiymeti 1.00 AZN-dir");
+        }
+    }
+}
